@@ -3,6 +3,6 @@ DELIMITER $$
 CREATE TRIGGER reset_valide_email
 BEFORE UPDATE ON users
 FOR EACH ROW
-SET NEW.valid_email = IF(OLD.email <> NEW.email, 0, NEW.valid.email);
+SET NEW.valid_email = IF(OLD.email <> NEW.email, 0, NEW.valid_email);
 $$
 DELIMITER ;
